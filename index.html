@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".menu_bg">
+    <!-- nav part start -->
+    <nav class="navbar navbar-expand-lg menu_bg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <svg width="80" height="63" viewBox="0 0 116 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.8324 14.762C60.9211 12.9517 62.4398 10.6056 62.3394 6.97915C62.3256 4.65276 62.3197 2.32638 62.3197 -6.26977e-06C54.6865 5.7086 47.0672 11.4349 39.4557 17.1691C39.449 17.1754 39.4424 17.1816 39.4357 17.1878C37.84 18.4019 36.5035 19.8651 35.3506 21.4083C32.2379 25.5774 32.4819 32.0368 32.6818 37.3307C32.7033 37.8997 32.7243 38.4552 32.7405 38.993C32.8193 41.6563 35.9671 42.2472 37.9685 41.1835C39.2198 40.5181 40.5181 39.8064 41.7971 39.1053C42.7711 38.5714 43.7338 38.0436 44.6561 37.5472C47.926 35.7842 46.3167 32.5497 44.0967 30.763C44.0967 30.763 44.0964 30.7629 44.096 30.7625C44.0962 30.762 44.0964 30.7615 44.0967 30.7611C41.067 26.847 42.117 23.8784 46.3364 21.4516C50.1441 19.2611 54.0503 16.98 57.8324 14.762ZM38.977 17.6364C39.09 17.5209 39.2048 17.4074 39.3212 17.2962C39.2002 17.4092 39.0856 17.5226 38.977 17.6364Z" fill="red"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.3777 26.9214C54.289 28.7316 52.7702 31.0777 52.8707 34.7042C52.8845 37.0306 52.8904 39.357 52.8904 41.6834C60.5235 35.9748 68.1429 30.2484 75.7544 24.5142C75.761 24.5081 75.7676 24.5019 75.7741 24.4957C77.37 23.2816 78.7065 21.8184 79.8595 20.2751C82.9722 16.1059 82.7282 9.64655 82.5283 4.35269C82.5068 3.78368 82.4858 3.22813 82.4696 2.69033C82.3908 0.0271072 79.243 -0.563847 77.2416 0.49987C75.9902 1.16527 74.6918 1.87702 73.4127 2.57818C72.4389 3.11204 71.4762 3.63977 70.554 4.1362C67.284 5.89921 68.8934 9.13369 71.1134 10.9203C71.1134 10.9203 71.1136 10.9205 71.1141 10.9208C71.1138 10.9213 71.1136 10.9218 71.1134 10.9223C74.143 14.8364 73.0931 17.8049 68.8737 20.2318C65.066 22.4222 61.1598 24.7033 57.3777 26.9214ZM76.2348 24.0451C76.1206 24.1619 76.0045 24.2766 75.8869 24.3891C76.0092 24.2748 76.1251 24.1601 76.2348 24.0451Z" fill="#5956E8"/>
+                <path d="M19.6028 63.4847C19.0399 58.8136 15.5045 56.1274 10.8235 56.1274C5.48089 56.1274 1.40232 59.8999 1.40232 66.5164C1.40232 73.1132 5.41176 76.9054 10.8235 76.9054C16.0081 76.9054 19.1387 73.4589 19.6028 69.7358L15.2774 69.7161C14.8725 71.8788 13.1739 73.1231 10.8926 73.1231C7.82137 73.1231 5.73765 70.8419 5.73765 66.5164C5.73765 62.3095 7.79175 59.9097 10.9223 59.9097C13.2628 59.9097 14.9515 61.2627 15.2774 63.4847H19.6028ZM22.5901 76.6289H26.7971V68.0471C26.7971 66.1807 28.1599 64.8968 30.0165 64.8968C30.5991 64.8968 31.3991 64.9956 31.7941 65.124V61.3911C31.4188 61.3022 30.8954 61.2429 30.4708 61.2429C28.7722 61.2429 27.3797 62.2305 26.8267 64.1068H26.6687V61.4602H22.5901V76.6289ZM40.1759 76.9252C43.9286 76.9252 46.4567 75.0982 47.0492 72.2837L43.1583 72.0269C42.7336 73.1824 41.6473 73.7848 40.245 73.7848C38.1415 73.7848 36.8083 72.3923 36.8083 70.1308V70.121H47.1381V68.9655C47.1381 63.8105 44.0174 61.2627 40.008 61.2627C35.5443 61.2627 32.6508 64.4327 32.6508 69.1137C32.6508 73.923 35.5048 76.9252 40.1759 76.9252ZM36.8083 67.5138C36.8972 65.7856 38.2107 64.4031 40.0771 64.4031C41.9041 64.4031 43.1681 65.7066 43.178 67.5138H36.8083ZM54.2089 76.9153C56.4507 76.9153 57.9024 75.9376 58.643 74.5254H58.7615V76.6289H62.7512V66.3979C62.7512 62.7835 59.6898 61.2627 56.3124 61.2627C52.6782 61.2627 50.2884 63.0008 49.7057 65.7659L53.5966 66.0819C53.883 65.0746 54.7817 64.3339 56.2926 64.3339C57.7246 64.3339 58.5443 65.0549 58.5443 66.2992V66.3584C58.5443 67.3361 57.5073 67.4645 54.8706 67.7212C51.8684 67.9977 49.1724 69.005 49.1724 72.3923C49.1724 75.3945 51.3154 76.9153 54.2089 76.9153ZM55.4137 74.0119C54.12 74.0119 53.1918 73.4095 53.1918 72.2541C53.1918 71.069 54.1694 70.4864 55.6507 70.279C56.5692 70.1506 58.0702 69.9333 58.5739 69.5976V71.2073C58.5739 72.7972 57.2604 74.0119 55.4137 74.0119ZM74.0833 61.4602H71.2293V57.826H67.0223V61.4602H64.9485V64.6203H67.0223V72.5207C67.0026 75.4932 69.0271 76.9647 72.0786 76.8363C73.1649 76.7968 73.9352 76.5795 74.3598 76.4413L73.6982 73.3107C73.4908 73.3502 73.0464 73.449 72.6514 73.449C71.812 73.449 71.2293 73.133 71.2293 71.9677V64.6203H74.0833V61.4602ZM76.8238 76.6289H81.0307V61.4602H76.8238V76.6289ZM78.9371 59.5048C80.1913 59.5048 81.2183 58.5469 81.2183 57.3717C81.2183 56.2064 80.1913 55.2485 78.9371 55.2485C77.6928 55.2485 76.6657 56.2064 76.6657 57.3717C76.6657 58.5469 77.6928 59.5048 78.9371 59.5048ZM98.5424 61.4602H94.0885L90.9481 72.3133H90.7901L87.6399 61.4602H83.1959L88.499 76.6289H93.2393L98.5424 61.4602ZM107.092 76.9252C110.845 76.9252 113.373 75.0982 113.965 72.2837L110.074 72.0269C109.65 73.1824 108.564 73.7848 107.161 73.7848C105.058 73.7848 103.725 72.3923 103.725 70.1308V70.121H114.054V68.9655C114.054 63.8105 110.934 61.2627 106.924 61.2627C102.46 61.2627 99.567 64.4327 99.567 69.1137C99.567 73.923 102.421 76.9252 107.092 76.9252ZM103.725 67.5138C103.813 65.7856 105.127 64.4031 106.993 64.4031C108.82 64.4031 110.084 65.7066 110.094 67.5138H103.725Z" fill="#181818"/>
+                </svg>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-itemm">
+                <a class="nav-link active" aria-current="page" href="#banner">Home</a>
+              </li>
+              <li class="nav-itemm">
+                <a class="nav-link" href="#service">Service</a>
+              </li>
+              <li class="nav-itemm">
+                <a class="nav-link" href="#protfolio">Work</a>
+              </li>
+              <li class="nav-itemm">
+                <a class="nav-link" href="#expert">Blog</a>
+              </li>
+              <li class="nav-itemm">
+                <a class="nav-link" href="#main_footer">Contact</a>
+              </li>
+            
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+   <!-- nav part end -->
+<!-- banner part strat -->
+    <section id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                   <div class="banner_text">
+                    <h2>We Are Digital Product Design Agency</h2>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                    <a href="#">Get Started</a>
+                   </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="ban_img">
+                      <img src="images/Banner Illustration.png" alt="">
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner part end -->
+<!-- service part start -->
+    <section id="service">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                 <div class="services text-center">
+                  <h4>Our Services</h4>
+                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                 </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service part end -->
+    <!-- design part strat -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-6 col-lg-4 ">
+           <div class="design_text">
+            <img src="img/one.png" alt="">
+            <h3>UI/UX Design</h3>
+            <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</h4>
+           </div>
+          </div>
+          <div class="col-6 col-sm-6 col-lg-4 ">
+           <div class="design_text">
+            <img src="img/six.png" alt="">
+            <h3>Web Development</h3>
+            <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</h4>
+           </div>
+          </div>
+          <div class="col-6 col-sm-6 col-lg-4">
+           <div class="design_text">
+            <img src="img/three.png" alt="">
+            <h3>Digital Marketing</h3>
+            <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</h4>
+           </div>
+          </div>
+          <div class="col-6 col-sm-6 col-lg-4">
+           <div class="design_text">
+            <img src="img/four.png" alt="">
+            <h3>Graphic Design</h3>
+            <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</h4>
+           </div>
+          </div>
+          <div class="col-6 col-sm-6 col-lg-4">
+           <div class="design_text">
+            <img src="img/five.png" alt="">
+            <h3>Web Design</h3>
+            <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</h4>
+           </div>
+          </div>
+          <div class="col-6 col-sm-6 col-lg-4">
+           <div class="design_text">
+            <img src="img/six.png" alt="">
+            <h3>Motion Design</h3>
+            <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</h4>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- design part end -->
+    <!-- protfolio part start -->
+    <section id="protfolio">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-6">
+               <div class="portfolio text-center">
+                <h3>Our Work Portfolio</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+               </div> 
+              </div>
+          </div>
+      </div>
+  </section>
+   <!-- protfolio part end -->
+  <!-- protfolio img part start -->
+  <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Graphic Design</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Mobile App </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Web Development</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="extra-tab" data-bs-toggle="tab" data-bs-target="#extra-tab-pane" type="button" role="tab" aria-controls="extra-tab-pane" aria-selected="false">Web Design</button>
+          </li>
+         
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="row">
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser1.png" alt="ser1.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser2.png" alt="ser2.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser3.png" alt="ser3.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser4.png" alt="ser4.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser5.png" alt="ser5.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser6.png" alt="ser6.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser7.png" alt="ser7.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser1.png" alt="ser1.png">
+                </div>
+             </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="row">
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser1.png" alt="ser1.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser2.png" alt="ser2.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser3.png" alt="ser3.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser4.png" alt="ser4.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser5.png" alt="ser5.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser6.png" alt="ser6.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser7.png" alt="ser7.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser1.png" alt="ser1.png">
+                </div>
+             </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <div class="row">
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser1.png" alt="ser1.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser2.png" alt="ser2.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser3.png" alt="ser3.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser4.png" alt="ser4.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser5.png" alt="ser5.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser6.png" alt="ser6.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser7.png" alt="ser7.png">
+                </div>
+             </div>
+             <div class="col-6 ol-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser1.png" alt="ser1.png">
+                </div>
+             </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="extra-tab-pane" role="tabpanel" aria-labelledby="extra-tab" tabindex="0">
+            <div class="row">
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser1.png" alt="ser1.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser2.png" alt="ser2.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser3.png" alt="ser3.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="ser_img_item">
+                  <img src="images/ser4.png" alt="ser4.png">
+                 </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser5.png" alt="ser5.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser6.png" alt="ser6.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser7.png" alt="ser7.png">
+                </div>
+             </div>
+             <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="ser_img_item">
+                 <img src="images/ser1.png" alt="ser1.png">
+                </div>
+             </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+ <!-- protfolio img part end -->
+   <!-- expert part start -->
+  <section id="expert">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+             <div class="expert text-center">
+              <h3>Our Expert Team Member</h3>
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+             </div> 
+            </div>
+        </div>
+    </div>
+</section>
+<!-- expert part end -->
+<!-- man part start -->
+<section id="man">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="work_img">
+          <img src="images/man.png" class="w-100" alt="">
+          <div class="work_text">
+            <div class="work_inner">
+              <h2>Hasan Imam</h2>
+              <p>UI Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="work_img">
+          <img src="images/women.png" class="w-100" alt="">
+          <div class="work_text">
+            <div class="work_inner">
+              <h2>Hasan Imam</h2>
+              <p>UI Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+        <div class="work_img">
+          <img src="images/man2.png" class="w-100" alt="">
+          <div class="work_text">
+            <div class="work_inner">
+              <h2>Hasan Imam</h2>
+              <p>UI Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- man part end -->
+<!-- coustomer part start -->
+<section>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+           <div class="customer">
+            <h3>We Care About Our Customer Experience Too</h3>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+           </div> 
+          </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+          <div class="customer_text">
+           <a href="#"><img src="img/Ellipse 7.png" alt=""></a>
+           <h3><img src="img/Group 28.png" alt=""></h3>
+           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+           <h4>Mahid Ahmed</h4>
+           <h5>UX Designer</h5>
+          </div>
+       </div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+          <div class="customer_text">
+           <a href="#"><img src="img/Ellipse 7.png" alt=""></a>
+           <h3><img src="img/Group 28.png" alt=""></h3>
+           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+           <h4>Mahid Ahmed</h4>
+           <h5>UX Designer</h5>
+          </div>
+       </div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+          <div class="customer_text">
+           <a href="#"><img src="img/Ellipse 7.png" alt=""></a>
+           <h3><img src="img/Group 28.png" alt=""></h3>
+           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+           <h4>Mahid Ahmed</h4>
+           <h5>UX Designer</h5>
+          </div>
+       </div>
+      </div>
+  </div>
+</section>
+<!-- coustomer part end -->
+<!-- news part start -->
+<section>
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-lg-6">
+           <div class="news text-center">
+            <h3>Our Letest News</h3>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+           </div> 
+          </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+          <div class="card h-100 news_im">
+            <img src="images/news1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <span><i class="fa-regular fa-user"></i> Admin</span>
+              <span><i class="fa-solid fa-calendar-week"></i>07/11/2021</span>
+              <h5 class="card-title">Business Plans That Fit Your Best Blog</h5>
+              <p class="card-text">There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
+              <a href="#">Learn More</a>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+          <div class="card h-100 news_im">
+            <img src="images/news2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <span><i class="fa-regular fa-user"></i> Admin</span>
+              <span><i class="fa-solid fa-calendar-week"></i>07/11/2021</span>
+              <h5 class="card-title">Business Plans That Fit Your Best Blog</h5>
+              <p class="card-text">There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+          <div class="card h-100 news_im">
+            <img src="images/news3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <span><i class="fa-regular fa-user"></i> Admin</span>
+              <span><i class="fa-solid fa-calendar-week"></i>07/11/2021</span>
+              <h5 class="card-title">Business Plans That Fit Your Best Blog</h5>
+              <p class="card-text">There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+<!-- news part end -->
+<!-- footer part start -->
+<section id="main_footer">
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-3">
+        <div class="fot_first">
+          <img src="images/footer logo.png" alt="footer logo">
+          <p class>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
+          <div class="icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 col-sm-3 col-md-3 col-lg-2">
+        <div class="fot_first">
+          <h4>Company</h4>
+            <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Latest News</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-3 col-sm-3 col-md-3 col-lg-2">
+        <div class="fot_first">
+          <h4>Product</h4>
+         <div class="fot_list">
+          <ul>
+            <li><a href="#">Prototype</a></li>
+            <li><a href="#">Plans & Pricing</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+         </div>
+        </div>
+      </div>
+      <div class="col-3 col-sm-3 col-md-3 col-lg-2">
+        <div class="fot_first">
+          <h4>Support</h4>
+          <div class="fot_list">
+            <ul>
+              <li><a href="#">Help Desk</a></li>
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">Become a Partner</a></li>
+              <li><a href="#">Developers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 col-sm-3 col-md-3 col-lg-2">
+        <div class="fot_first">
+          <h4>Contact</h4>
+         <div class="fot_list">
+          <ul>
+            <li><a href="#">524 Broadway , NYC</a></li>
+            <li><a href="#">+1 777 - 978 - 5570</a></li>
+          </ul>
+         </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- footer part end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
